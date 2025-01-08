@@ -20,7 +20,7 @@ const HomePage = () => {
           <div className='grid grid-cols-4 gap-4 px-10'>
             {
               products.map((product) => (
-                <ProductCard key={product.id} product={product}/>
+                <ProductCard key={product._id} product={product}/>
               ))
             }
           </div>
