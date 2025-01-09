@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/product.route.js"
+import userRouter from "./routes/user.route.js"
 
 // initialize env
 dotenv.config()
@@ -13,6 +14,7 @@ app.use(express.json())
 
 // routes for product
 app.use("/api/products", productRoutes)
+app.use("/api/users", userRouter)
 
 // start listening at PORT
 app.listen(PORT, () => {
